@@ -6,3 +6,9 @@ TuxGuitar is released under the GNU Lesser General Public License.
 
 REQUIREMENTS:
 Java Runtime Environment 1.5.X or later installed in your system.
+
+--
+
+This is an unofficial branch containing a zoom in/out support.
+
+Build instructions: https://benkiew.wordpress.com/2014/09/23/how-to-build-tuxguitar-with-netbeans/
