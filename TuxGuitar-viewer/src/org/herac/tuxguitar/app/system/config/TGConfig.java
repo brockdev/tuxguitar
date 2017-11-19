@@ -19,7 +19,9 @@ public class TGConfig{
 	public static final int TAB_LINE_SPACING = 10;
 	public static final int FIRST_TRACK_SPACING = 0;//20;
 	public static final int TRACK_SPACING = 10;
-	
+
+	public static final float LAYOUT_ZOOM = 1.0f;
+
 	public static final Font FONT_WIDGETS = new Font(DEFAULT_FONT_NAME, Font.BOLD, 12);
 	public static final Font FONT_LOADING_MESSAGE = new Font(DEFAULT_FONT_NAME, Font.BOLD ,18);
 	public static final Color COLOR_WIDGET_BACKGROUND = new Color(255,255,255);

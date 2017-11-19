@@ -122,6 +122,8 @@ import org.herac.tuxguitar.app.action.impl.view.TGToggleMatrixEditorAction;
 import org.herac.tuxguitar.app.action.impl.view.TGTogglePianoEditorAction;
 import org.herac.tuxguitar.app.action.impl.view.TGToggleTransportDialogAction;
 import org.herac.tuxguitar.app.action.impl.view.TGToggleViewAction;
+import org.herac.tuxguitar.app.action.impl.zoom.TGZoomInAction;
+import org.herac.tuxguitar.app.action.impl.zoom.TGZoomOutAction;
 import org.herac.tuxguitar.app.action.listener.cache.TGUpdateController;
 import org.herac.tuxguitar.app.action.listener.cache.controller.TGUpdateAddedMeasureController;
 import org.herac.tuxguitar.app.action.listener.cache.controller.TGUpdateAddedTrackController;
@@ -512,6 +514,8 @@ public class TGActionConfigMap extends TGActionMap<TGActionConfig> {
 		this.map(TGSetCompactViewAction.NAME, LOCKABLE | SHORTCUT, UPDATE_SONG_CTL);
 		this.map(TGSetChordNameEnabledAction.NAME, LOCKABLE | SHORTCUT, UPDATE_SONG_CTL);
 		this.map(TGSetChordDiagramEnabledAction.NAME, LOCKABLE | SHORTCUT, UPDATE_SONG_CTL);
+		this.map(TGZoomInAction.NAME, SHORTCUT);
+		this.map(TGZoomOutAction.NAME, SHORTCUT);
 		
 		//tools
 		this.map(TGSelectScaleAction.NAME, LOCKABLE);

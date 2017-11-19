@@ -110,7 +110,9 @@ public class Tablature implements TGController {
 	
 	public void reloadStyles(){
 		if( this.getViewLayout() != null ){
-			this.getViewLayout().loadStyles(1f);
+			TGConfigManager config = TGConfigManager.getInstance(this.context);
+			float value = config.getFloatValue(TGConfigKeys.LAYOUT_ZOOM, 1.0f);
+			this.getViewLayout().loadStyles(config.getFloatValue(TGConfigKeys.LAYOUT_ZOOM));
 		}
 		this.loadCaretStyles();
 	}

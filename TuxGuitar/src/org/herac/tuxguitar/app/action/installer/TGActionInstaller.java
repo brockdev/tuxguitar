@@ -123,6 +123,8 @@ import org.herac.tuxguitar.app.action.impl.view.TGToggleMatrixEditorAction;
 import org.herac.tuxguitar.app.action.impl.view.TGTogglePianoEditorAction;
 import org.herac.tuxguitar.app.action.impl.view.TGToggleTransportDialogAction;
 import org.herac.tuxguitar.app.action.impl.view.TGToggleViewAction;
+import org.herac.tuxguitar.app.action.impl.zoom.TGZoomInAction;
+import org.herac.tuxguitar.app.action.impl.zoom.TGZoomOutAction;
 import org.herac.tuxguitar.editor.action.TGActionBase;
 import org.herac.tuxguitar.editor.action.channel.TGAddChannelAction;
 import org.herac.tuxguitar.editor.action.channel.TGAddNewChannelAction;
@@ -453,6 +455,8 @@ public class TGActionInstaller {
 		installAction(new TGSetCompactViewAction(context));
 		installAction(new TGSetChordNameEnabledAction(context));
 		installAction(new TGSetChordDiagramEnabledAction(context));
+		installAction(new TGZoomInAction(context));
+		installAction(new TGZoomOutAction(context));
 		
 		//tools
 		installAction(new TGSelectScaleAction(context));

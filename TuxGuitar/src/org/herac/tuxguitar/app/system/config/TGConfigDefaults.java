@@ -21,7 +21,6 @@ public class TGConfigDefaults{
 		TGProperties properties = propertiesManager.createProperties();
 		TGConfigDefaults.loadProperties( properties );
 		propertiesManager.readProperties(properties, RESOURCE, MODULE);
-		
 		return properties;
 	}
 	
@@ -41,6 +40,7 @@ public class TGConfigDefaults{
 		loadProperty(properties, TGConfigKeys.SHOW_MARKERS, false);
 		loadProperty(properties, TGConfigKeys.LAYOUT_MODE, TGLayout.MODE_VERTICAL);
 		loadProperty(properties, TGConfigKeys.LAYOUT_STYLE, (TGLayout.DISPLAY_TABLATURE | TGLayout.DISPLAY_SCORE | TGLayout.DISPLAY_COMPACT | TGLayout.DISPLAY_CHORD_DIAGRAM));
+		loadProperty(properties, TGConfigKeys.LAYOUT_ZOOM, 1.0f);
 		loadProperty(properties, TGConfigKeys.EDITOR_MOUSE_MODE, EditorKit.MOUSE_MODE_SELECTION);
 		loadProperty(properties, TGConfigKeys.EDITOR_NATURAL_KEY_MODE,true);
 		loadProperty(properties, TGConfigKeys.FONT_DEFAULT, (DEFAULT_FONT_NAME + ",6,false,false"));
@@ -137,6 +137,10 @@ public class TGConfigDefaults{
 	}
 	
 	private static void loadProperty(TGProperties properties, String key, float[] value) {
+		TGPropertiesUtil.setValue(properties, key, value);
+	}
+
+	private static void loadProperty(TGProperties properties, String key, float value) {
 		TGPropertiesUtil.setValue(properties, key, value);
 	}
 }
