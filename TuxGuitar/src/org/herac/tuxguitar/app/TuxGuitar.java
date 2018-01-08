@@ -37,6 +37,7 @@ import org.herac.tuxguitar.app.view.dialog.fretboard.TGFretBoardEditor;
 import org.herac.tuxguitar.app.view.dialog.lyric.TGLyricEditor;
 import org.herac.tuxguitar.app.view.dialog.matrix.TGMatrixEditor;
 import org.herac.tuxguitar.app.view.dialog.piano.TGPianoEditor;
+import org.herac.tuxguitar.app.view.docking.TGDockingManager;
 import org.herac.tuxguitar.app.view.main.TGWindow;
 import org.herac.tuxguitar.app.view.menu.TGMenuManager;
 import org.herac.tuxguitar.document.TGDocumentManager;
@@ -188,10 +189,6 @@ public class TuxGuitar {
 		if(config.getBooleanValue(TGConfigKeys.SHOW_MATRIX)){
 			new TGActionProcessor(this.context, TGToggleMatrixEditorAction.NAME).process();
 		}
-		//---Piano---
-		if(config.getBooleanValue(TGConfigKeys.SHOW_PIANO)){
-			new TGActionProcessor(this.context, TGTogglePianoEditorAction.NAME).process();
-		}
 		//---Markers---
 		if(config.getBooleanValue(TGConfigKeys.SHOW_MARKERS)){
 			new TGActionProcessor(this.context, TGToggleMarkerListAction.NAME).process();
@@ -218,6 +215,10 @@ public class TuxGuitar {
 		return TGMatrixEditor.getInstance(this.context);
 	}
 	
+	public TGDockingManager getDockingManager() {
+		return TGDockingManager.getInstance(this.context);
+	}
+
 	public TGChannelManagerDialog getChannelManager(){
 		return TGChannelManagerDialog.getInstance(this.context);
 	}

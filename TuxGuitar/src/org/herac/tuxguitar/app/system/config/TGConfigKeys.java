@@ -19,6 +19,7 @@ public class TGConfigKeys {
 	public static final String LAYOUT_MODE = "layout.mode";
 	public static final String LAYOUT_STYLE = "layout.style";
 	public static final String LAYOUT_ZOOM = "layout.zoom";
+	public static final String LAYOUT_DOCK_TO_TOP = "layout.dock-to-top";
 	public static final String LANGUAGE = "language";
 	public static final String EDITOR_MOUSE_MODE = "editor.mouse.mode";
 	public static final String EDITOR_NATURAL_KEY_MODE = "editor.natural.key.mode";
